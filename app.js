@@ -2,12 +2,12 @@
 
 // Configuración de Firebase
 const firebaseConfig = {
-    apiKey: "TU_API_KEY",
-    authDomain: "TU_AUTH_DOMAIN",
-    projectId: "TU_PROJECT_ID",
-    storageBucket: "TU_STORAGE_BUCKET",
-    messagingSenderId: "TU_MESSAGING_SENDER_ID",
-    appId: "TU_APP_ID"
+  apiKey: "AIzaSyAVLZ7Hyzc52A5f6YSbco1BAXvNss3VdCY",
+  authDomain: "tottiauth-edd78.firebaseapp.com",
+  projectId: "tottiauth-edd78",
+  storageBucket: "tottiauth-edd78.firebasestorage.app",
+  messagingSenderId: "846290820059",
+  appId: "1:846290820059:web:f634ace70f59b53c5525fe",
 };
 
 // Inicializar Firebase
