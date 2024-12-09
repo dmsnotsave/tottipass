@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de Contraseñas</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <!-- CryptoJS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Acceso al Administrador de Contraseñas</h2>
+        <input type="password" id="auth-key" placeholder="Ingresa la clave">
+        <button id="login-button">Ingresar</button>
+        <p id="login-error" class="error"></p>
+    </div>
+
+    <div id="app-container" style="display: none;">
+        <h2>Mis Contraseñas</h2>
+        <button id="logout-button">Cerrar Sesión</button>
+        <button id="add-button">Agregar Nueva Contraseña</button>
+        <table id="passwords-table">
+            <thead>
+                <tr>
+                    <th>Servicio</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="passwords-body">
+                <!-- Las contraseñas se cargarán aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Formulario Modal para Agregar/Editar -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title">Agregar Contraseña</h2>
+            <form id="password-form">
+                <label for="service">Servicio:</label>
+                <input type="text" id="service" required>
+                
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" required>
+                
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" required>
+                
+                <input type="hidden" id="doc-id">
+                
+                <button type="submit" id="save-button">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
